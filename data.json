@@ -1,0 +1,57 @@
+{
+  "header": {
+    "title": "Enactus FST Tanger",
+    "subtitle": "Entrepreneurial Action Paving the Way to a Better World",
+    "logo": "/images/logo.png"
+  },
+  "about": {
+    "title": "Notre Mission",
+    "description": "<p>Enactus est une communauté internationale d'étudiants, de leaders académiques et professionnels engagés pour créer un monde meilleur à travers l'action entrepreneuriale.</p>\n<p>À Enactus FST Tanger, nous mobilisons les talents d'étudiants universitaires pour développer des projets communautaires qui autonomisent les personnes dans le besoin.</p>",
+    "image": "/images/about.jpg",
+    "stats": [
+      {
+        "number": "50+",
+        "label": "Membres Actifs"
+      },
+      {
+        "number": "10+",
+        "label": "Projets Réalisés"
+      },
+      {
+        "number": "1000+",
+        "label": "Vies Impactées"
+      }
+    ]
+  },
+  "projects": [],
+  "team": [],
+  "events": [],
+  "gallery": [],
+  "contact": {
+    "email": "enactus@fstt.ac.ma",
+    "phone": "+212 6 00 00 00 00",
+    "address": "Faculté des Sciences et Techniques de Tanger<br>BP 416, Tanger, Maroc",
+    "social": [
+      {
+        "platform": "Facebook",
+        "url": "https://facebook.com/enactusfstt",
+        "icon": "<i class=\"fab fa-facebook-f\"></i>"
+      },
+      {
+        "platform": "Instagram",
+        "url": "https://instagram.com/enactusfstt",
+        "icon": "<i class=\"fab fa-instagram\"></i>"
+      },
+      {
+        "platform": "LinkedIn",
+        "url": "https://linkedin.com/company/enactusfstt",
+        "icon": "<i class=\"fab fa-linkedin-in\"></i>"
+      },
+      {
+        "platform": "Twitter",
+        "url": "https://twitter.com/enactusfstt",
+        "icon": "<i class=\"fab fa-x-twitter\"></i>"
+      }
+    ]
+  }
+}
