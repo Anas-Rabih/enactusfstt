@@ -23,7 +23,15 @@
       }
     ]
   },
-  "projects": [],
+  "projects": [
+    {
+      "status": "En cours",
+      "title": "TEST",
+      "description": "BLA BKA ",
+      "image": "/images/project2.png",
+      "date": "2026-02-01T00:00:00.000+01:00"
+    }
+  ],
   "team": [],
   "events": [],
   "gallery": [],
