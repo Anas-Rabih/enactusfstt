@@ -1,8 +1,8 @@
 backend:
   name: github
-  repo: YOUR_GITHUB_USERNAME/YOUR_REPO_NAME   # ← change this
+  repo: anas-rabih/enactusfstt   # ← change this
   branch: main
-  base_url: https://YOUR_WORKER.workers.dev   # ← change this
+  base_url: https://raspy-glitter-b3b1.rabihsenhajianas03.workers.dev   # ← change this
   auth_endpoint: /auth
 
 media_folder: "images"
@@ -160,4 +160,5 @@ collections:
                 fields:
                   - { label: "Plateforme", name: "platform", widget: "string", hint: "Ex: Facebook" }
                   - { label: "URL", name: "url", widget: "string" }
+
                   - { label: "Icône HTML (Font Awesome)", name: "icon", widget: "string", hint: "Ex: <i class=\"fab fa-facebook-f\"></i>" }
