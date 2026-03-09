@@ -1,0 +1,163 @@
+backend:
+  name: github
+  repo: YOUR_GITHUB_USERNAME/YOUR_REPO_NAME   # ← change this
+  branch: main
+  base_url: https://YOUR_WORKER.workers.dev   # ← change this
+  auth_endpoint: /auth
+
+media_folder: "images"
+public_folder: "/images"
+
+locale: "fr"
+
+collections:
+  - name: "site"
+    label: "Contenu du Site"
+    files:
+      - name: "data"
+        label: "Toutes les Données"
+        file: "data.json"
+        fields:
+
+          # ===========================
+          # EN-TÊTE
+          # ===========================
+          - label: "En-tête"
+            name: "header"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Titre", name: "title", widget: "string", default: "Enactus FST Tanger" }
+              - { label: "Sous-titre", name: "subtitle", widget: "string", default: "Entrepreneurial Action Paving the Way to a Better World" }
+              - { label: "Logo", name: "logo", widget: "image", default: "/images/logo.png" }
+
+          # ===========================
+          # À PROPOS
+          # ===========================
+          - label: "À Propos"
+            name: "about"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Titre section", name: "title", widget: "string", default: "Notre Mission" }
+              - { label: "Description", name: "description", widget: "markdown" }
+              - { label: "Image", name: "image", widget: "image" }
+              - label: "Statistiques (max 3)"
+                name: "stats"
+                widget: "list"
+                max: 3
+                summary: "{{fields.label}}: {{fields.number}}"
+                fields:
+                  - { label: "Chiffre", name: "number", widget: "string", hint: "Ex: 50+" }
+                  - { label: "Libellé", name: "label", widget: "string", hint: "Ex: Membres Actifs" }
+
+          # ===========================
+          # PROJETS
+          # ===========================
+          - label: "Projets"
+            name: "projects"
+            widget: "list"
+            collapsed: true
+            summary: "{{fields.title}} ({{fields.status}})"
+            fields:
+              - { label: "Titre", name: "title", widget: "string" }
+              - { label: "Description courte", name: "description", widget: "text" }
+              - { label: "Image", name: "image", widget: "image" }
+              - label: "Statut"
+                name: "status"
+                widget: "select"
+                options:
+                  - { label: "En cours", value: "En cours" }
+                  - { label: "Terminé",  value: "Terminé" }
+                  - { label: "En pause", value: "En pause" }
+                default: "En cours"
+              - { label: "Date", name: "date", widget: "datetime" }
+
+          # ===========================
+          # ÉQUIPE
+          # ===========================
+          - label: "Équipe"
+            name: "team"
+            widget: "list"
+            collapsed: true
+            summary: "{{fields.name}} — {{fields.role}}"
+            fields:
+              - { label: "Nom complet", name: "name", widget: "string" }
+              - { label: "Rôle / Poste", name: "role", widget: "string" }
+              - { label: "Photo", name: "image", widget: "image" }
+              - { label: "Biographie courte", name: "bio", widget: "text", required: false }
+              - { label: "Ordre d'affichage", name: "order", widget: "number", default: 0, value_type: "int", min: 0, hint: "0 = affiché en premier" }
+
+          # ===========================
+          # ÉVÉNEMENTS
+          # ===========================
+          - label: "Événements"
+            name: "events"
+            widget: "list"
+            collapsed: true
+            summary: "{{fields.title}} — {{fields.date}}"
+            fields:
+              - { label: "Titre", name: "title", widget: "string" }
+              - { label: "Date", name: "date", widget: "datetime" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Lien inscription", name: "link", widget: "string", required: false, hint: "Laisser vide si non disponible" }
+
+          # ===========================
+          # GALERIE
+          # ===========================
+          - label: "Galerie Photos"
+            name: "gallery"
+            widget: "list"
+            collapsed: true
+            summary: "{{fields.caption}}"
+            fields:
+              - { label: "Photo", name: "image", widget: "image" }
+              - { label: "Légende", name: "caption", widget: "string" }
+              - { label: "Date", name: "date", widget: "datetime" }
+
+          # ===========================
+          # PARTENAIRES (NEW)
+          # ===========================
+          - label: "Partenaires / Sponsors"
+            name: "partners"
+            widget: "list"
+            collapsed: true
+            summary: "{{fields.name}} ({{fields.edition}})"
+            hint: "Logos affichés en noir & blanc par défaut. Couleur au survol."
+            fields:
+              - { label: "Nom de l'entreprise", name: "name", widget: "string" }
+              - { label: "Logo", name: "logo", widget: "image", required: false, hint: "Recommandé: PNG transparent, fond blanc ou transparent" }
+              - { label: "Site web", name: "url", widget: "string", required: false, hint: "https://..." }
+              - label: "Édition"
+                name: "edition"
+                widget: "string"
+                default: "Gen-E 2025"
+                hint: "Ex: Gen-E 2025"
+              - label: "Type"
+                name: "type"
+                widget: "select"
+                options:
+                  - { label: "Sponsor Principal",   value: "main" }
+                  - { label: "Partenaire",           value: "partner" }
+                  - { label: "Partenaire Communauté", value: "community" }
+                default: "partner"
+
+          # ===========================
+          # CONTACT
+          # ===========================
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Email", name: "email", widget: "string", default: "enactus@fstt.ac.ma" }
+              - { label: "Téléphone", name: "phone", widget: "string", default: "+212 6 00 00 00 00" }
+              - { label: "Adresse", name: "address", widget: "text", hint: "Vous pouvez utiliser <br> pour un retour à la ligne" }
+              - label: "Réseaux Sociaux"
+                name: "social"
+                widget: "list"
+                summary: "{{fields.platform}}"
+                fields:
+                  - { label: "Plateforme", name: "platform", widget: "string", hint: "Ex: Facebook" }
+                  - { label: "URL", name: "url", widget: "string" }
+                  - { label: "Icône HTML (Font Awesome)", name: "icon", widget: "string", hint: "Ex: <i class=\"fab fa-facebook-f\"></i>" }
