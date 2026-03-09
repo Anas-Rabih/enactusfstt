@@ -6,7 +6,7 @@
     <meta name="description" content="Enactus FST Tanger — Club étudiant d'entrepreneuriat social à la Faculté des Sciences et Techniques de Tanger, Maroc.">
     <meta name="keywords" content="Enactus, FST Tanger, FSTT, entrepreneuriat, social, club, étudiant, Maroc, Tanger">
 
-    <!-- Open Graph / Social sharing -->
+    <!-- Open Graph -->
     <meta property="og:title" content="Enactus FST Tanger">
     <meta property="og:description" content="Entrepreneurial Action Paving the Way to a Better World">
     <meta property="og:image" content="/images/og-image.jpg">
@@ -19,7 +19,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -27,126 +27,133 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 
-
+    <!-- Netlify Identity Widget -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
 
     <!-- =============== NAVBAR =============== -->
     <nav id="navbar">
-        <div class="nav-container">
-            <a href="#hero" class="nav-logo">
-                <img src="images/logo.png" alt="Enactus FST Tanger" id="nav-logo-img">
-            </a>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#hero" class="nav-link">Accueil</a></li>
-                <li><a href="#about" class="nav-link">À Propos</a></li>
-                <li><a href="#projects" class="nav-link">Projets</a></li>
-                <li><a href="#team" class="nav-link">Équipe</a></li>
-                <li><a href="#events" class="nav-link">Événements</a></li>
-                <li><a href="#gallery" class="nav-link">Galerie</a></li>
-                <li><a href="#partners" class="nav-link">Partenaires</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><a href="#join" class="btn-nav">Rejoindre</a></li>
-            </ul>
-            <button class="burger" id="burger" aria-label="Ouvrir le menu">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Enactus FSTT Logo" id="nav-logo">
+            </div>
+            <!-- class="mobile-menu-toggle" matches JS querySelector('.mobile-menu-toggle') -->
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+            <ul class="nav-links">
+                <li><a href="#header">Accueil</a></li>
+                <li><a href="#about">À Propos</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#team">Équipe</a></li>
+                <li><a href="#events">Événements</a></li>
+                <li><a href="#gallery">Galerie</a></li>
+                <li><a href="#partners">Partenaires</a></li>
+                <li><a href="#join-club">Rejoindre</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
     </nav>
 
-    <!-- =============== HERO =============== -->
-    <header id="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-overlay"></div>
-        <div class="hero-shape hero-shape-1"></div>
-        <div class="hero-shape hero-shape-2"></div>
-        <div class="hero-shape hero-shape-3"></div>
+    <!-- =============== HEADER / HERO =============== -->
+    <!-- id="header" matches CSS #header rules AND JS getElementById calls -->
+    <header id="header">
+        <div class="header-background">
+            <div class="header-overlay"></div>
+            <div class="header-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
 
-        <div class="hero-content">
-            <div class="hero-text">
-                <div class="hero-badge">Club Étudiant &middot; FST Tanger &middot; Maroc</div>
-                <img src="images/logo.png" alt="Enactus" class="hero-logo">
-                <h1 id="hero-title">Enactus <span class="text-accent">FST</span> Tanger</h1>
-                <p id="hero-subtitle">Entrepreneurial Action Paving the Way to a Better World</p>
-                <div class="hero-cta">
-                    <a href="#about" class="btn-primary">Découvrir</a>
-                    <a href="#join" class="btn-outline">Nous Rejoindre</a>
+        <div class="container header-content">
+            <div class="header-text">
+                <div class="logo-container">
+                    <img src="images/logo.png" alt="Enactus Logo" class="header-logo" id="header-main-logo">
+                </div>
+                <!-- IDs match JS getElementById('header-title') and getElementById('header-subtitle') -->
+                <h1 id="header-title">Enactus FST Tanger</h1>
+                <p id="header-subtitle">Entrepreneurial Action Paving the Way to a Better World</p>
+                <div class="header-buttons">
+                    <a href="#about" class="btn-primary">Découvrir Plus</a>
+                    <a href="#join-club" class="btn-secondary">Nous Rejoindre</a>
                 </div>
             </div>
-            <div class="hero-stats">
-                <div class="stat-card">
-                    <span class="stat-number" id="stat1-number">50+</span>
-                    <span class="stat-label" id="stat1-label">Membres Actifs</span>
+
+            <div class="header-visual">
+                <div class="floating-card card-1">
+                    <img src="images/floating/IDEA.png" alt="Idée">
                 </div>
-                <div class="stat-card">
-                    <span class="stat-number" id="stat2-number">10+</span>
-                    <span class="stat-label" id="stat2-label">Projets Réalisés</span>
+                <div class="floating-card card-2">
+                    <img src="images/floating/ACTION.png" alt="Action">
                 </div>
-                <div class="stat-card">
-                    <span class="stat-number" id="stat3-number">1000+</span>
-                    <span class="stat-label" id="stat3-label">Vies Impactées</span>
+                <div class="floating-card card-3">
+                    <img src="images/floating/social-impact.png" alt="Impact Social">
                 </div>
             </div>
         </div>
 
-        <a href="#about" class="scroll-down" aria-label="Défiler vers le bas">
+        <div class="scroll-indicator">
             <span>Scroll</span>
             <div class="scroll-arrow"></div>
-        </a>
+        </div>
+
+        <div class="Wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
     </header>
 
     <!-- =============== ABOUT =============== -->
     <section id="about">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">À Propos</span>
-                <h2 class="section-title">Notre <span class="text-accent">Mission</span></h2>
-            </div>
-            <div class="about-grid">
+            <h2 class="section-title">À Propos d'Enactus</h2>
+            <div class="about-content">
                 <div class="about-text">
                     <h3 id="about-title">Notre Mission</h3>
                     <div id="about-description">
                         <p>Enactus est une communauté internationale d'étudiants, de leaders académiques et professionnels engagés pour créer un monde meilleur à travers l'action entrepreneuriale.</p>
                         <p>À Enactus FST Tanger, nous mobilisons les talents d'étudiants universitaires pour développer des projets communautaires qui autonomisent les personnes dans le besoin.</p>
                     </div>
-                    <div class="about-values">
-                        <div class="value-item">
-                            <i class="fas fa-lightbulb"></i>
-                            <span>Innovation</span>
-                        </div>
-                        <div class="value-item">
-                            <i class="fas fa-hands-helping"></i>
-                            <span>Impact Social</span>
-                        </div>
-                        <div class="value-item">
-                            <i class="fas fa-globe"></i>
-                            <span>Leadership</span>
-                        </div>
-                    </div>
                 </div>
                 <div class="about-image">
-                    <img src="images/about.jpg" alt="Enactus FST Tanger Team" id="about-img">
-                    <div class="about-image-badge">
-                        <i class="fas fa-award"></i>
-                        <span>Enactus Maroc</span>
-                    </div>
+                    <img src="images/about.jpg" alt="Enactus Team" id="about-img">
+                </div>
+            </div>
+            <div class="stats">
+                <div class="stat-item">
+                    <h3 id="stat1-number">50+</h3>
+                    <p id="stat1-label">Membres Actifs</p>
+                </div>
+                <div class="stat-item">
+                    <h3 id="stat2-number">10+</h3>
+                    <p id="stat2-label">Projets Réalisés</p>
+                </div>
+                <div class="stat-item">
+                    <h3 id="stat3-number">1000+</h3>
+                    <p id="stat3-label">Vies Impactées</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- =============== PROJECTS =============== -->
-    <section id="projects" class="section-alt">
+    <section id="projects">
+        <div class="Triangle">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
+            </svg>
+        </div>
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Ce Qu'on Fait</span>
-                <h2 class="section-title">Nos <span class="text-accent">Projets</span></h2>
-                <p class="section-subtitle">Nos initiatives d'entrepreneuriat social qui créent de l'impact</p>
-            </div>
+            <h2 class="section-title">Nos Projets</h2>
+            <p class="section-subtitle">Découvrez nos initiatives d'entrepreneuriat social</p>
             <div class="projects-grid" id="projects-container">
-                <!-- Loaded dynamically -->
+                <!-- Loaded dynamically by main.js renderProjects() -->
             </div>
         </div>
     </section>
@@ -154,41 +161,26 @@
     <!-- =============== TEAM =============== -->
     <section id="team">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">L'Équipe</span>
-                <h2 class="section-title">Les <span class="text-accent">Personnes</span> Derrière Enactus</h2>
-                <p class="section-subtitle">Les visages passionnés qui font avancer notre mission</p>
-            </div>
+            <h2 class="section-title">Notre Équipe</h2>
+            <p class="section-subtitle">Les personnes derrière Enactus FSTT</p>
             <div class="team-grid" id="team-container">
-                <!-- Loaded dynamically -->
+                <!-- Loaded dynamically by main.js renderTeam() -->
             </div>
         </div>
     </section>
 
     <!-- =============== EVENTS =============== -->
-    <section id="events" class="section-alt">
+    <section id="events">
+        <div class="Triangle">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
+            </svg>
+        </div>
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Agenda</span>
-                <h2 class="section-title">Nos <span class="text-accent">Événements</span></h2>
-                <p class="section-subtitle">Rejoignez-nous lors de nos prochains événements</p>
-            </div>
-
-            <!-- Gen-E Featured Card -->
-            <div class="featured-event">
-                <div class="featured-event-content">
-                    <span class="featured-badge">Événement Phare</span>
-                    <h3>Gen-E — The Next Generation of Entrepreneurs</h3>
-                    <p>Notre conférence annuelle dédiée à l'entrepreneuriat étudiant. Un événement unique rassemblant speakers, sponsors et étudiants entrepreneurs de toute la région.</p>
-                    <a href="https://gene.enactusfstt.com" target="_blank" rel="noopener" class="btn-primary">Découvrir Gen-E →</a>
-                </div>
-                <div class="featured-event-icon">
-                    <i class="fas fa-rocket"></i>
-                </div>
-            </div>
-
+            <h2 class="section-title">Événements à Venir</h2>
+            <p class="section-subtitle">Rejoignez-nous lors de nos prochains événements</p>
             <div class="events-grid" id="events-container">
-                <!-- Loaded dynamically -->
+                <!-- Loaded dynamically by main.js renderEvents() -->
             </div>
         </div>
     </section>
@@ -196,27 +188,27 @@
     <!-- =============== GALLERY =============== -->
     <section id="gallery">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Moments</span>
-                <h2 class="section-title">Notre <span class="text-accent">Galerie</span></h2>
-                <p class="section-subtitle">Des instants capturés de nos aventures entrepreneuriales</p>
-            </div>
+            <h2 class="section-title">Galerie Photos</h2>
+            <p class="section-subtitle">Moments mémorables de nos activités</p>
             <div class="gallery-grid" id="gallery-container">
-                <!-- Loaded dynamically -->
+                <!-- Loaded dynamically by main.js renderGallery() -->
             </div>
+        </div>
+        <div class="custom-Straight">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
+            </svg>
         </div>
     </section>
 
     <!-- =============== PARTNERS =============== -->
-    <section id="partners" class="section-alt">
+    <!-- Added: was in config.yml + data.json schema but completely missing from HTML -->
+    <section id="partners">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Ils Nous Font Confiance</span>
-                <h2 class="section-title">Nos <span class="text-accent">Partenaires</span></h2>
-                <p class="section-subtitle" id="partners-subtitle">Partenaires de Gen-E 2025</p>
-            </div>
+            <h2 class="section-title">Nos Partenaires</h2>
+            <p class="section-subtitle" id="partners-subtitle">Partenaires de Gen-E 2025</p>
             <div class="partners-grid" id="partners-container">
-                <!-- Loaded dynamically -->
+                <!-- Loaded dynamically by main.js renderPartners() -->
             </div>
             <div class="become-partner">
                 <p>Vous souhaitez devenir partenaire ?</p>
@@ -225,97 +217,85 @@
         </div>
     </section>
 
-    <!-- =============== JOIN =============== -->
-    <section id="join" class="section-join">
+    <!-- =============== JOIN CLUB =============== -->
+    <section id="join-club">
         <div class="container">
-            <div class="join-content">
-                <div class="join-text">
-                    <span class="section-tag section-tag-dark">Rejoignez-nous</span>
-                    <h2>Faites Partie de <span class="text-dark">Notre</span> Aventure</h2>
-                    <p>Rejoignez Enactus FST Tanger et développez vos compétences entrepreneuriales tout en créant un impact réel dans votre communauté.</p>
-                    <a href="https://forms.gle/your-form-id" target="_blank" rel="noopener" class="btn-dark" id="join-btn">
-                        Postuler Maintenant <i class="fas fa-arrow-right"></i>
-                    </a>
+            <h2 class="section-title">Prêt à rejoindre notre communauté ?</h2>
+            <p class="section-subtitle">Rejoignez Enactus FSTT</p>
+            <p>Prêt à faire partie de notre aventure entrepreneuriale ? Cliquez sur le bouton ci-dessous pour remplir notre formulaire d'inscription et rejoindre notre équipe !</p>
+
+            <div class="join-benefits">
+                <div class="benefit-item">
+                    <i class="fas fa-rocket fa-2x"></i>
+                    <p>Formations gratuites</p>
                 </div>
-                <div class="join-benefits">
-                    <div class="benefit-card">
-                        <i class="fas fa-graduation-cap"></i>
-                        <h4>Formations</h4>
-                        <p>Ateliers et formations gratuites en entrepreneuriat</p>
-                    </div>
-                    <div class="benefit-card">
-                        <i class="fas fa-network-wired"></i>
-                        <h4>Réseau</h4>
-                        <p>Accédez à un réseau professionnel international</p>
-                    </div>
-                    <div class="benefit-card">
-                        <i class="fas fa-trophy"></i>
-                        <h4>Compétitions</h4>
-                        <p>Participez aux compétitions nationales Enactus</p>
-                    </div>
-                    <div class="benefit-card">
-                        <i class="fas fa-handshake"></i>
-                        <h4>Impact</h4>
-                        <p>Créez un impact positif dans votre communauté</p>
-                    </div>
+                <div class="benefit-item">
+                    <i class="fas fa-users fa-2x"></i>
+                    <p>Réseau professionnel</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-lightbulb fa-2x"></i>
+                    <p>Projets innovants</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-trophy fa-2x"></i>
+                    <p>Compétitions</p>
                 </div>
             </div>
+
+            <a href="https://forms.gle/your-form-id" target="_blank" rel="noopener" class="btn-primary join-club-btn" id="join-btn">
+                Rejoignez-nous maintenant
+            </a>
         </div>
     </section>
 
     <!-- =============== CONTACT =============== -->
     <section id="contact">
+        <div class="Straight">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
+            </svg>
+        </div>
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Contact</span>
-                <h2 class="section-title">Parlons <span class="text-accent">Ensemble</span></h2>
-            </div>
-            <div class="contact-grid">
+            <h2 class="section-title">Contactez-Nous</h2>
+            <div class="contact-content">
                 <div class="contact-info">
+                    <h3>Restez Connectés</h3>
                     <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                        <div>
-                            <strong>Email</strong>
-                            <a href="/cdn-cgi/l/email-protection#ea8f848b899e9f99aa8c999e9ec48b89c4878b" id="contact-email"><span class="__cf_email__" data-cfemail="a5c0cbc4c6d1d0d6e5c3d6d1d18bc4c68bc8c4">[email&#160;protected]</span></a>
-                        </div>
+                        <strong>Email:</strong>
+                        <!-- Plain email — JS updateContact() overwrites from data.json -->
+                        <a href="mailto:enactus@fstt.ac.ma" id="contact-email">enactus@fstt.ac.ma</a>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
-                        <div>
-                            <strong>Téléphone</strong>
-                            <a href="tel:+212600000000" id="contact-phone">+212 6 00 00 00 00</a>
-                        </div>
+                        <strong>Téléphone:</strong>
+                        <a href="tel:+212600000000" id="contact-phone">+212 6 00 00 00 00</a>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <div>
-                            <strong>Adresse</strong>
-                            <p id="contact-address">Faculté des Sciences et Techniques de Tanger<br>BP 416, Tanger, Maroc</p>
-                        </div>
+                        <strong>Adresse:</strong>
+                        <p id="contact-address">Faculté des Sciences et Techniques de Tanger<br>BP 416, Tanger, Maroc</p>
                     </div>
                     <div class="social-links" id="social-links-container">
-                        <!-- Loaded dynamically -->
+                        <!-- Loaded dynamically by main.js updateContact() -->
                     </div>
                 </div>
                 <div class="contact-form-wrapper">
-                    <form id="contact-form" name="contact" method="POST">
+                    <h3>Envoyez-nous un Message</h3>
+                    <!-- data-netlify="true" + hidden form-name = required for Netlify Forms to detect -->
+                    <form id="contact-form" class="contact-form" name="contact" method="POST" data-netlify="true">
+                        <input type="hidden" name="form-name" value="contact">
                         <div class="form-group">
-                            <label for="name">Nom</label>
-                            <input type="text" id="name" name="name" placeholder="Votre nom complet" required>
+                            <input type="text" id="name" name="name" placeholder="Votre Nom" required>
                         </div>
                         <div class="form-group">
-                            <label for="email-input">Email</label>
-                            <input type="email" id="email-input" name="email" placeholder="votre@email.com" required>
+                            <input type="email" id="email-input" name="email" placeholder="Votre Email" required>
                         </div>
                         <div class="form-group">
-                            <label for="subject">Sujet</label>
                             <input type="text" id="subject" name="subject" placeholder="Sujet de votre message">
                         </div>
                         <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+                            <textarea id="message" name="message" rows="5" placeholder="Votre Message" required></textarea>
                         </div>
-                        <button type="submit" class="btn-primary btn-full">
+                        <button type="submit" class="btn-primary">
                             Envoyer <i class="fas fa-paper-plane"></i>
                         </button>
                     </form>
@@ -325,37 +305,34 @@
     </section>
 
     <!-- =============== FOOTER =============== -->
-    <footer id="footer">
+    <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="images/logo.png" alt="Enactus FST Tanger" class="footer-logo">
-                    <p>Entrepreneurial Action Paving the Way to a Better World</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#about">À Propos</a>
-                    <a href="#projects">Projets</a>
-                    <a href="#events">Événements</a>
-                    <a href="#partners">Partenaires</a>
-                    <a href="#contact">Contact</a>
-                    <a href="https://gene.enactusfstt.com" target="_blank" rel="noopener">Gen-E →</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p id="footer-text">&copy; 2025 Enactus FST Tanger. Tous droits réservés.</p>
-                <p>Développé avec ❤️ par l'équipe IT d'Enactus FSTT</p>
-            </div>
+            <p id="footer-text">&copy; 2025 Enactus FST Tanger. Tous droits réservés.</p>
+            <p>Développé avec ❤️ par l'équipe IT d'Enactus FSTT</p>
         </div>
     </footer>
 
-    <!-- Lightbox -->
+    <!-- Lightbox — used by gallery click events -->
     <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image agrandie">
-        <button class="lightbox-close" id="lightbox-close" aria-label="Fermer">
+        <button id="lightbox-close" aria-label="Fermer">
             <i class="fas fa-times"></i>
         </button>
         <img src="" alt="Galerie Enactus" id="lightbox-img">
     </div>
 
     <script src="js/main.js"></script>
+
+    <!-- Netlify Identity redirect for CMS admin -->
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
 </body>
 </html>
