@@ -12,13 +12,13 @@ const defaultData = {
     header: {
         title: "Enactus FST Tanger",
         subtitle: "Entrepreneurial Action Paving the Way to a Better World",
-        logo: "/images/logo.png"
+        logo: "images/logo.png"
     },
     about: {
         title: "Notre Mission",
         description: `<p>Enactus est une communauté internationale d'étudiants, de leaders académiques et professionnels engagés pour créer un monde meilleur à travers l'action entrepreneuriale.</p>
         <p>À Enactus FST Tanger, nous mobilisons les talents d'étudiants universitaires pour développer des projets communautaires qui autonomisent les personnes dans le besoin.</p>`,
-        image: "/images/about.jpg",
+        image: "images/about.jpg",
         stats: [
             { number: "50+", label: "Membres Actifs" },
             { number: "10+", label: "Projets Réalisés" },
@@ -176,9 +176,9 @@ function renderProjects() {
     
     container.innerHTML = sortedProjects.map(project => `
         <div class="project-card">
-            <img src="${project.image || '/images/placeholder.jpg'}" 
+            <img src="${project.image || 'images/placeholder.jpg'}" 
                  alt="${project.title}" 
-                 onerror="this.src='/images/placeholder.jpg'">
+                 onerror="this.src='images/placeholder.jpg'">
             <div class="project-info">
                 <h3>${project.title}</h3>
                 <p>${project.description}</p>
@@ -213,9 +213,9 @@ function renderTeam() {
     
     container.innerHTML = sortedTeam.map(member => `
         <div class="team-member">
-            <img src="${member.image || '/images/placeholder-avatar.jpg'}" 
+            <img src="${member.image || 'images/placeholder-avatar.jpg'}" 
                  alt="${member.name}" 
-                 onerror="this.src='/images/placeholder-avatar.jpg'">
+                 onerror="this.src='images/placeholder-avatar.jpg'">
             <h3>${member.name}</h3>
             <p>${member.role}</p>
             ${member.bio ? `<span class="bio">${member.bio}</span>` : ''}
@@ -300,7 +300,7 @@ function renderGallery() {
         <div class="gallery-item" data-index="${index}">
             <img src="${item.image}" 
                  alt="${item.caption || 'Photo Enactus'}" 
-                 onerror="this.src='/images/placeholder.jpg'">
+                 onerror="this.src='images/placeholder.jpg'">
             <div class="gallery-overlay">
                 <span>🔍</span>
             </div>
@@ -561,3 +561,4 @@ window.addEventListener('error', (e) => {
 
 
 console.log('✅ Script main.js chargé avec succès');
+
