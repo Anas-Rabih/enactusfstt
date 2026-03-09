@@ -88,6 +88,12 @@
       "type": "partner",
       "name": "SOPP",
       "logo": "images/lightbulb.png"
+    },
+    {
+      "edition": "Gen-E 2025",
+      "type": "main",
+      "name": "KJK",
+      "logo": "images/placeholder-avatar.webp"
     }
   ]
 }
