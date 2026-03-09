@@ -51,7 +51,7 @@ async function loadData() {
     try {
         console.log('🔄 Chargement des données depuis data.json...');
         
-        const response = await fetch('/data.json');
+        const response = await fetch('data.json');
         
         if (!response.ok) {
             throw new Error('Fichier data.json non trouvé');
@@ -558,5 +558,6 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('error', (e) => {
     console.error('❌ Erreur détectée:', e.message, e.filename, e.lineno);
 });
+
 
 console.log('✅ Script main.js chargé avec succès');
