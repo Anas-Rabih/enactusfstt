@@ -38,7 +38,7 @@
       "name": "Rabih Senhaji",
       "role": "DEV",
       "bio": "HJH ",
-      "image": "/images/placeholder-avatar.webp"
+      "image": "images/placeholder-avatar.webp"
     }
   ],
   "events": [
@@ -50,7 +50,7 @@
   ],
   "gallery": [
     {
-      "image": "/images/about.jpg",
+      "image": "images/about.jpg",
       "caption": "KKKK",
       "date": "2027-02-02T00:00:00.000+01:00"
     }
@@ -87,7 +87,7 @@
       "edition": "Gen-E 2025",
       "type": "partner",
       "name": "SOPP",
-      "logo": "/images/lightbulb.png"
+      "logo": "images/lightbulb.png"
     }
   ]
 }
